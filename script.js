@@ -20,9 +20,25 @@ console.log(string1.slice(-1));
 
 //1 способ
 
-String.prototype.replaceAt=function(index, znak) {
-    return this.substr(0, index) + znak + this.substr(index + znak.length);
+String.prototype.replaceAt=function(index, Symbol) {
+    return this.substr(0, index) + Symbol + this.substr(index + Symbol.length);
 }
 var stringNew='Я изучаю JavaScript';
-console.log(stringNew.replaceAt(8, "p"));
+console.log(stringNew.replaceAt(7, "p"));
 
+
+String.prototype.replaceAt=function(index, Symbol) {
+    return this.substr(0, index) + Symbol + this.substr(index + Symbol.length);
+}
+var stringNew2= (stringNew.substring(0, stringNew.length - 2))
+console.log(stringNew2.replaceAt( 9, "Frontend"));
+
+//2 способ
+
+let change = 'Я изучаю JavaScript'; 
+let newstr = change.replace(/ю/gi, 'з');
+console.log(newstr); 
+
+let change2 = 'Я изучаю JavaScript'; 
+let newstr2 = change2.replace(/JavaScript/gi, 'Frontend');
+console.log(newstr2); 
