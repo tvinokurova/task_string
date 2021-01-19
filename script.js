@@ -2,28 +2,27 @@
 
 //1 способ
 
-var i = 'Я изучаю JavaScript';
-console.log(i.substr(0,1));
-console.log(i.substr(2,1));
-console.log(i.substr(-1));
+var string1 = 'Я изучаю JavaScript';
+console.log(string1.substr(0,1));
+console.log(string1.substr(2,1));
+console.log(string1.substr(-1));
 
 
 //2 способ
 
-var e = 'Я изучаю JavaScript';
+var string2 = 'Я изучаю JavaScript';
 
-console.log(e.slice(0,1));
-console.log(e.slice(2,3));
-console.log(e.slice(-1));
+console.log(string1.slice(0,1));
+console.log(string1.slice(2,3));
+console.log(string1.slice(-1));
 
+//замена символа
 
-//3 способ
+//1 способ
 
-var z = 'Я изучаю JavaScript';
-var f = z.split('');
+String.prototype.replaceAt=function(index, znak) {
+    return this.substr(0, index) + znak + this.substr(index + znak.length);
+}
+var stringNew='Я изучаю JavaScript';
+console.log(stringNew.replaceAt(8, "p"));
 
-delete f[1],
-
-
-
-console.log(f);
